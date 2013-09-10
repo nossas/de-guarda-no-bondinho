@@ -207,6 +207,11 @@ pt-br:
     errors:
       <<: *errors
   activerecord:
+    attributes:
+      user:
+        name: "Nome"
+        email: "E-mail"
+        phone: "Telefone"
     errors:
       <<: *errors
   faker:
