@@ -54,3 +54,4 @@ end
 gem 'inherited_resources', github: 'josevalim/inherited_resources'
 gem 'slim-rails'
 gem 'facebox-rails'
+gem 'coveralls', require: false
