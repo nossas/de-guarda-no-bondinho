@@ -18,6 +18,8 @@
 //= require rails.validations
 //= require_tree .
 
+$.facebox.settings.closeImage = '/assets/closelabel.png'
+$.facebox.settings.loadingImage = '/assets/loading.gif'
 $(function(){ $('a[rel*=facebox]').facebox(); });
 $(function(){ $(document).foundation(); });
 $(document).bind('reveal.facebox', function() {
