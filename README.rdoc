@@ -1,4 +1,6 @@
 {<img src="https://travis-ci.org/meurio/de-guarda-no-bondinho.png?branch=master" alt="Build Status" />}[https://travis-ci.org/meurio/de-guarda-no-bondinho]
+{<img src="https://codeclimate.com/github/meurio/de-guarda-no-bondinho.png" />}[https://codeclimate.com/github/meurio/de-guarda-no-bondinho]
+{<img src="https://coveralls.io/repos/meurio/de-guarda-no-bondinho/badge.png?branch=master" alt="Coverage Status" />}[https://coveralls.io/r/meurio/de-guarda-no-bondinho?branch=master]
 
 == README
 
