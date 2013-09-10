@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require foundation
 //= require turbolinks
 //= require jquery.facebox
 //= rails.validations
@@ -20,3 +21,5 @@
 $(function(){
   $('a[rel*=facebox]').facebox();
 });
+
+$(function(){ $(document).foundation(); });
