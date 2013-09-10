@@ -27,3 +27,11 @@ end
 Then(/^I should be in "(.*?)"$/) do |arg1|
   page.current_path.should == users_path
 end
+
+Given(/^there is an user with email "(.*?)"$/) do |arg1|
+  User.make! email: arg1
+end
+
+Then(/^it must have (\d+) user with email "(.*?)"$/) do |arg1, arg2|
+  User.where(email: arg2).count.should == arg1.to_i
+end

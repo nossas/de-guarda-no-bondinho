@@ -1,4 +1,4 @@
-- if flash[:notice] == "User was successfully created."
+- if session[:user_id].present?
   .thanks_for_joining Thanks for joining
 - else
   = link_to "Alistar-se por e-mail", new_user_path, id: :join_by_email, rel: "facebox"

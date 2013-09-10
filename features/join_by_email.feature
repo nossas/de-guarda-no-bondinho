@@ -11,11 +11,12 @@ Feature: join by email
   Scenario: when I fill the form correctly
     Given I fill "user name" with "Nícolas Iensen"
     And I fill "user e-mail" with "nicolas@meurio.org.br"
-    And I fill "user phone" with "9999-9999"
+    And I fill "user phone" with "(21) 9999-9999"
     When I submit "join by email form"
     Then I should see "thanks for joining"
     And I should not see "join by email button"
 
+  @javascript
   Scenario: when I don't fill the form correctly
     When I submit "join by email form"
     Then I should be in "the homepage"
@@ -24,3 +25,11 @@ Feature: join by email
     And I should see "user phone field error"
 
   Scenario: when I already joined
+    Given there is an user with email "nicolas@meurio.org.br"
+    And I fill "user name" with "Nícolas Iensen"
+    And I fill "user e-mail" with "nicolas@meurio.org.br"
+    And I fill "user phone" with "(21) 9999-9999"
+    When I submit "join by email form"
+    Then I should see "thanks for joining"
+    And I should not see "join by email button"
+    And it must have 1 user with email "nicolas@meurio.org.br"
