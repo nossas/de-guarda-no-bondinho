@@ -17,4 +17,10 @@ Feature: join by email
     And I should not see "join by email button"
 
   Scenario: when I don't fill the form correctly
+    When I submit "join by email form"
+    Then I should be in "the homepage"
+    And I should see "user name field error"
+    And I should see "user email field error"
+    And I should see "user phone field error"
+
   Scenario: when I already joined
