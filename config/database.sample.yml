@@ -46,9 +46,9 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: de-guarda-no-bondinho_test
+  database: de_guarda_no_bondinho_test
   pool: 5
-  username: de-guarda-no-bondinho
+  username: de_guarda_no_bondinho
   password:
 
 production:

@@ -4,8 +4,8 @@ rvm:
 
 before_script:
   - "cp config/database.sample.yml config/database.yml"
-  - "psql -c 'create role de-guarda-no-bondinho SUPERUSER LOGIN;' postgres"
-  - "psql -c 'create database de-guarda-no-bondinho_test;' -U de-guarda-no-bondinho postgres"
+  - "psql -c 'create role de_guarda_no_bondinho SUPERUSER LOGIN;' postgres"
+  - "psql -c 'create database de_guarda_no_bondinho_test;' -U de_guarda_no_bondinho postgres"
   - "sh -e /etc/init.d/xvfb start"
 
 env:
