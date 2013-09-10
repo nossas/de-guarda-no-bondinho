@@ -8,5 +8,4 @@ def to_element string
   return ".field_with_errors label[for='user_name']"   if string == "user name field error"
   return ".field_with_errors label[for='user_email']"  if string == "user email field error"
   return ".field_with_errors label[for='user_phone']"  if string == "user phone field error"
-  raise "I don't know element '#{string}'"
 end
