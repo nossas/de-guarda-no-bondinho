@@ -20,7 +20,7 @@
 
 $(function(){ $('a[rel*=facebox]').facebox(); });
 $(function(){ $(document).foundation(); });
-
 $(document).bind('reveal.facebox', function() {
   $('form.new_user').enableClientSideValidations();
+  $('.phone_with_ddd').mask('(00) 000000000');
 });
