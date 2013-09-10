@@ -1,5 +1,6 @@
 class UsersController < InheritedResources::Base
   after_action(only: :create) { session[:user_id] = @user.id }
+  layout false, only: :new
 
   def create
     @user = User.create_with(params[:user]).find_or_create_by(email: params[:user][:email])

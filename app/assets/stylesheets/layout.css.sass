@@ -1,2 +1,36 @@
+$row-width: 730px
+
+$orange: #e26c26
+
+@import foundation_and_overrides
 @import compass/css3
+@import jquery.facebox
+@import fonts
 @import users
+
+body
+  font-family: Proxima Nova
+
+h1
+  font-family: Populaire
+  font-weight: normal
+  font-size: 3em
+  line-height: 1em
+
+#facebox
+  .content
+    padding: 1em
+
+.field_with_errors
+  label.message
+    color: red
+
+input[type='submit']
+  font-family: "Proxima Nova Extrabold"
+  background: $orange
+  border: none
+  color: white
+  text-transform: uppercase
+  font-size: 1em
+  padding: .5em 1em
+  +border-radius(3px)

@@ -1,8 +1,11 @@
 = form_for @user, :validate => true do |form|
-  = form.label :name
-  = form.text_field :name
-  = form.label :email
-  = form.email_field :email
-  = form.label :phone
-  = form.text_field :phone
-  = form.submit
+  .field
+    = form.label :name
+    = form.text_field :name
+  .field
+    = form.label :email
+    = form.email_field :email
+  .field
+    = form.label :phone
+    = form.text_field :phone
+  = form.submit "Alistar"

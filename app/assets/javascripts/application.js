@@ -15,11 +15,12 @@
 //= require foundation
 //= require turbolinks
 //= require jquery.facebox
-//= rails.validations
+//= require rails.validations
 //= require_tree .
 
-$(function(){
-  $('a[rel*=facebox]').facebox();
-});
-
+$(function(){ $('a[rel*=facebox]').facebox(); });
 $(function(){ $(document).foundation(); });
+
+$(document).bind('reveal.facebox', function() {
+  $('form.new_user').enableClientSideValidations();
+});
