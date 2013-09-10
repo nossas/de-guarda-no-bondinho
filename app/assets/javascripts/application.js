@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require jquery.facebox
+//= rails.validations
 //= require_tree .
 
 $(function(){

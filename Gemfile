@@ -58,3 +58,4 @@ gem 'inherited_resources', github: 'josevalim/inherited_resources'
 gem 'slim-rails'
 gem 'facebox-rails'
 gem 'coveralls', require: false
+gem 'client_side_validations', github: 'bcardarella/client_side_validations', branch: "4-0-beta"
