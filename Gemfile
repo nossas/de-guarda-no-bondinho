@@ -44,6 +44,7 @@ end
 group :test do
   gem 'cucumber-rails', :require => false
   gem 'database_cleaner'
+  gem 'selenium-webdriver'
 end
 
 group :development, :test do
@@ -52,3 +53,4 @@ end
 
 gem 'inherited_resources', github: 'josevalim/inherited_resources'
 gem 'slim-rails'
+gem 'facebox-rails'

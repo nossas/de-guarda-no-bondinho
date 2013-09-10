@@ -7,6 +7,7 @@ Feature: join by email
     Given I'm in "the homepage"
     And I click on "join by email button"
 
+  @javascript
   Scenario: when I fill the form correctly
     Given I fill "user name" with "Nícolas Iensen"
     And I fill "user e-mail" with "nicolas@meurio.org.br"
