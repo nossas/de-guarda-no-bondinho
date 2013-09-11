@@ -44,3 +44,7 @@ end
 Then(/^the "(.*?)" should contain "(.*?)"$/) do |arg1, arg2|
   page.should have_css(to_element(arg1), text: arg2)
 end
+
+Then(/^an email should be sent to "(.*?)"$/) do |arg1|
+  ActionMailer::Base.deliveries.select{|e| e.to.include?(arg1)}.should_not be_empty
+end

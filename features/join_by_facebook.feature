@@ -14,6 +14,7 @@ Feature: join by Facebook
     Then I should see "thanks for joining"
     And I should not see "join by Facebook button"
     And it should subscribed to MailChimp
+    And an email should be sent to "nicolas@meurio.org.br"
 
   @javascript
   Scenario: when I don't fill the form correclty
