@@ -55,6 +55,8 @@ group :development, :test do
   gem 'shoulda-matchers'
 end
 
+gem 'rails_12factor', group: :production
+
 gem 'inherited_resources', github: 'josevalim/inherited_resources'
 gem 'slim-rails'
 gem 'facebox-rails'
@@ -62,6 +64,6 @@ gem 'coveralls', require: false
 gem 'client_side_validations', github: 'bcardarella/client_side_validations', branch: "4-0-beta"
 gem 'compass-rails', github: "Compass/compass-rails", branch: "rails4-hack"
 gem 'zurb-foundation'
-gem 'rails_12factor'
 gem 'gibbon'
 gem 'newrelic_rpm'
+gem 'omniauth-facebook'

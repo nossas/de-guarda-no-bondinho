@@ -2,6 +2,9 @@ DeGuardaNoBondinho::Application.routes.draw do
   root 'users#index'
   resources :users, only: [:index, :new, :create]
 
+  get "/auth/facebook", as: :facebook_auth
+  get "/auth/facebook/callback" => 'users#create'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

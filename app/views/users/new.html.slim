@@ -1,10 +1,12 @@
 = form_for @user, :validate => true do |form|
-  .field
-    = form.label :name
-    = form.text_field :name
-  .field
-    = form.label :email
-    = form.email_field :email
+  - if params[:facebook].blank?
+    .field
+      = form.label :name
+      = form.text_field :name
+    .field
+      = form.label :email
+      = form.email_field :email
+  = hidden_field_tag :facebook, params[:facebook]
   .field
     = form.label :phone
     = form.text_field :phone, class: 'phone_with_ddd'

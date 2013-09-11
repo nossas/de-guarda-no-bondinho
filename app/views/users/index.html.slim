@@ -12,6 +12,6 @@
         .thanks_for_joining Thanks for joining
       - else
         .large-6.columns
-          = link_to image_tag('bt-facebook.png'), new_user_path, id: :join_by_facebook, rel: "facebox"
+          = link_to image_tag('bt-facebook.png'), new_user_path(facebook: true), id: :join_by_facebook, rel: "facebox"
         .large-6.columns
           = link_to image_tag('bt-email.png'), new_user_path, id: :join_by_email, rel: "facebox"

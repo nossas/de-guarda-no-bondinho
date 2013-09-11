@@ -3,7 +3,7 @@ Given(/^I'm in "(.*?)"$/) do |arg1|
 end
 
 Given(/^I click on "(.*?)"$/) do |arg1|
-  click_link "join_by_email" if arg1 == "join by email button"
+  click_link to_link(arg1)
 end
 
 Given(/^I fill "(.*?)" with "(.*?)"$/) do |arg1, arg2|
@@ -17,6 +17,7 @@ When(/^I submit "(.*?)"$/) do |arg1|
 end
 
 Then(/^I should see "(.*?)"$/) do |arg1|
+  sleep 1
   page.should have_css(to_element(arg1))
 end
 

@@ -18,3 +18,4 @@ config/database.yml
 *.swp
 coverage
 .DS_Store
+config/initializers/01_envvars.rb
