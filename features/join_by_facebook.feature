@@ -15,5 +15,14 @@ Feature: join by Facebook
     And I should not see "join by Facebook button"
     And it should subscribed to MailChimp
 
+  @javascript
   Scenario: when I don't fill the form correclty
+    When I submit "join by Facebook form"
+    Then I should see "user phone field error"
+
+  @javascript @omniauth_test @gibbon
   Scenario: when I already joined
+    Given there is an user with email "nicolas@meurio.org.br"
+    And I fill "user phone" with "(21) 9999-9999"
+    When I submit "join by Facebook form"
+    Then I should see "thanks for joining"
