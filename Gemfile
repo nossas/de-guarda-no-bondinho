@@ -56,6 +56,7 @@ group :development, :test do
 end
 
 gem 'rails_12factor', group: :production
+gem 'mailcatcher', group: :development
 
 gem 'inherited_resources', github: 'josevalim/inherited_resources'
 gem 'slim-rails'
@@ -70,4 +71,3 @@ gem 'omniauth-facebook'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'fog'
-gem 'mailcatcher'
