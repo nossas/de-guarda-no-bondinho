@@ -145,8 +145,6 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    meta-tags-helpers (0.1.7)
-      rails
     mime-types (1.25)
     mini_magick (3.6.0)
       subexec (~> 0.2.1)
@@ -291,7 +289,6 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   machinist (>= 2.0.0.beta2)
-  meta-tags-helpers
   mini_magick
   newrelic_rpm
   omniauth-facebook
