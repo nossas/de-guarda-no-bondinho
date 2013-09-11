@@ -16,6 +16,8 @@ class User < ActiveRecord::Base
         :merge_vars => {FNAME: self.name}, 
         :double_optin => false
       })
+    rescue Exception => e
+      puts e.message
     end
   end
 end
