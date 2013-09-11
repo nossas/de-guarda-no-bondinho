@@ -9,7 +9,8 @@ class UsersController < InheritedResources::Base
       params[:user] = { 
         name: facebook_data[:info][:name], 
         email: facebook_data[:info][:email], 
-        phone: session.delete(:user_phone) 
+        phone: session.delete(:user_phone),
+        avatar: facebook_data[:info][:image]
       }
     end
 
@@ -19,7 +20,7 @@ class UsersController < InheritedResources::Base
   end
 
   def permitted_params
-    params.permit(user: [:name, :email, :phone])
+    params.permit(user: [:name, :email, :phone, :avatar])
   end
 
   private
