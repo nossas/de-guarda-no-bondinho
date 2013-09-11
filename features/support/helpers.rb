@@ -12,6 +12,7 @@ def to_element string
   return ".field_with_errors label[for='user_phone']"  if string == "user phone field error"
   return ".twitter-share-button"                       if string == "Twitter share button"
   return ".facebook-share-button"                      if string == "Facebook share button"
+  return ".counter"                                    if string == "user counter"
 end
 
 def to_link string
