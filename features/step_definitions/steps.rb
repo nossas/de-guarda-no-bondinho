@@ -36,3 +36,11 @@ end
 Then(/^it should subscribed to MailChimp$/) do
   expect(@gb_lists).to have_received(:subscribe)
 end
+
+Given(/^there are (\d+) users enrolled$/) do |arg1|
+  arg1.to_i.times { User.make! }
+end
+
+Then(/^the "(.*?)" should contain "(.*?)"$/) do |arg1, arg2|
+  page.should have_css(to_element(arg1), text: arg2)
+end

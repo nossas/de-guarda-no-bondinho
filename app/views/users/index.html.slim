@@ -2,6 +2,9 @@
   .top_bg
   .row
     .large-12.columns
+      .counter
+        span= User.count.to_s.rjust(4, '0')
+    .large-12.columns
       h1
         | O Governo do Rio está sucateando o patrimônio nacional.
         br
