@@ -4,6 +4,7 @@ DeGuardaNoBondinho::Application.routes.draw do
 
   get "/auth/facebook", as: :facebook_auth
   get "/auth/facebook/callback" => 'users#create'
+  get "/auth/failure", as: :auth_failure
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
