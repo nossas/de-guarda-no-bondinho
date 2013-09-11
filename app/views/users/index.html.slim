@@ -2,20 +2,20 @@
   .top_bg
   .row
     .large-12.columns
-      h1
-        | O Governo do Rio está sucateando o patrimônio nacional.
-        br
-        | Os bondinhos de Santa Teresa precisam da sua ajuda!
-      p Há dois anos, um acidente matou seis pessoas e tirou os bondinhos de Santa Teresa de circulação. Infelizmente, essa foi apenas a parte visível e trágica do sucateamento sistemático de um dos símbolos mais tradicionais do Rio de Janeiro. Abandonados em uma garagem, cerca de 60 toneladas de peças dos bondes já foram doadas para ONGs sem maiores explicações. Se isso continuar, em breve, dos bondinhos só restará os trilhos.
-      p Por isso, estamos de guarda! Vamos montar uma legião para impedir a retirada de peças até que seja feito um inventário minucioso desse patrimônio tombado. A cidade é nossa. Os bondinhos também!
+      h1 O Governo do Rio está sucateando o patrimônio nacional. Os bondinhos de Santa Teresa precisam da sua ajuda!
     .large-12.columns
       - if session[:user_id].present?
         .thanks_for_joining
-          p 
-            strong Você está de guarda!
+          h2 Você está de guarda!
           p Obrigado por fazer parte dessa mobilização. Quanto mais gente pegar esse bonde melhor. Por isso, chame os seus amigos no Facebook.
-          a href="https://twitter.com/share" class="twitter-share-button" data-lang="pt" Tweetar
+          a href="#" class="facebook-share-button"
+            span.count
+              fb:comments-count[href="#{root_url}"]
+          a href="#" class="twitter-share-button"
       - else
+        .large-12.columns
+          p Há dois anos, um acidente matou seis pessoas e tirou os bondinhos de Santa Teresa de circulação. Infelizmente, essa foi apenas a parte visível e trágica do sucateamento sistemático de um dos símbolos mais tradicionais do Rio de Janeiro. Abandonados em uma garagem, cerca de 60 toneladas de peças dos bondes já foram doadas para ONGs sem maiores explicações. Se isso continuar, em breve, dos bondinhos só restará os trilhos.
+          p Por isso, estamos de guarda! Vamos montar uma legião para impedir a retirada de peças até que seja feito um inventário minucioso desse patrimônio tombado. A cidade é nossa. Os bondinhos também!
         .large-6.columns
           = link_to image_tag('bt-facebook.png'), new_user_path(facebook: true), id: :join_by_facebook, rel: "facebox"
         .large-6.columns
