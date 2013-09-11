@@ -1,4 +1,4 @@
-$row-width: 870px
+$row-width: 780px
 
 $orange: #e26c26
 
@@ -36,3 +36,41 @@ input[type='submit']
   cursor: pointer
   +box-shadow(0 2px darken($orange, 20%))
   +border-radius(3px)
+
+.facebook-share-button
+  background: image-url("fb-share.png") no-repeat
+  height: 0
+  padding-top: 20px
+  width: 124px
+  display: inline-block
+  position: relative
+  span.count
+    display: block
+    position: absolute
+    right: -40px
+    top: 0
+    background: white
+    +border-radius(3px)
+    color: black
+    padding: .25em .5em
+    font-size: .9em
+    height: 21px
+    +box-shadow(gray 0 1px 2px)
+    &:after
+      content: ""
+      position: absolute
+      display: block
+      width: 0
+      top: 6px
+      left: -4px
+      bottom: auto
+      border-style: solid
+      border-width: 5px 5px 5px 0
+      border-color: transparent white
+      
+.twitter-share-button
+  background: image-url("tweet.png") no-repeat center center
+  height: 0
+  padding-top: 20px
+  width: 81px
+  display: inline-block

@@ -1,4 +1,4 @@
-Before('@gibbon') do
+Before do
   @gb_lists = double
   gb = double
   @gb_lists.stub(:subscribe)
