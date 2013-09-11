@@ -1,6 +1,6 @@
 def to_element string
   return "user_name"                                   if string == "user name"
-  return "user_email"                                  if string == "user e-mail"
+  return "user_email"                                  if string == "user email"
   return "user_phone"                                  if string == "user phone"
   return "form#new_user"                               if string == "join by email form"
   return "form#new_user"                               if string == "join by Facebook form"
@@ -10,6 +10,7 @@ def to_element string
   return ".field_with_errors label[for='user_name']"   if string == "user name field error"
   return ".field_with_errors label[for='user_email']"  if string == "user email field error"
   return ".field_with_errors label[for='user_phone']"  if string == "user phone field error"
+  return ".twitter-share-button"                       if string == "Twitter share button"
 end
 
 def to_link string

@@ -10,7 +10,7 @@ Feature: join by email
   @javascript @gibbon
   Scenario: when I fill the form correctly
     Given I fill "user name" with "Nícolas Iensen"
-    And I fill "user e-mail" with "nicolas@meurio.org.br"
+    And I fill "user email" with "nicolas@meurio.org.br"
     And I fill "user phone" with "(21) 9999-9999"
     When I submit "join by email form"
     Then I should see "thanks for joining"
@@ -29,6 +29,6 @@ Feature: join by email
   Scenario: when I already joined
     Given there is an user with email "nicolas@meurio.org.br"
     And I fill "user name" with "Nícolas Iensen"
-    And I fill "user e-mail" with "nicolas@meurio.org.br"
+    And I fill "user email" with "nicolas@meurio.org.br"
     When I fill "user phone" with "(21) 9999-9999"
     Then I should see "user email field error"
