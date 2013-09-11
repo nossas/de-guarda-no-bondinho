@@ -1,9 +1,15 @@
 body.users.index
   .enrollment
-    background: image-url("bg-top.jpg") no-repeat bottom center #ffb901
+    background: image-url("bg-top-base.png") repeat-x bottom center #ffb901
     text-align: center
     padding-top: 2em
     padding-bottom: 2em
+    .top_bg
+      position: absolute
+      top: 0
+      width: 100%
+      height: 134px
+      background: image-url("bg-top-topo.png") repeat-x top center
   
   form.new_user
     margin: 0
