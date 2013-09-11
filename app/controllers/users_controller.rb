@@ -23,6 +23,10 @@ class UsersController < InheritedResources::Base
     params.permit(user: [:name, :email, :phone, :avatar])
   end
 
+  def oauth_failure
+    redirect_to root_path
+  end
+
   private
 
   def facebook_auth
