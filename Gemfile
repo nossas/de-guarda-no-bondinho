@@ -63,3 +63,4 @@ gem 'client_side_validations', github: 'bcardarella/client_side_validations', br
 gem 'compass-rails', github: "Compass/compass-rails", branch: "rails4-hack"
 gem 'zurb-foundation'
 gem 'rails_12factor'
+gem 'gibbon'

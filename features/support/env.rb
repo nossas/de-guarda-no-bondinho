@@ -8,6 +8,7 @@ Coveralls.wear!
 # files.
 
 require 'cucumber/rails'
+require 'cucumber/rspec/doubles'
 require "#{Rails.root}/spec/support/blueprints.rb"
 
 # Capybara defaults to CSS3 selectors rather than XPath.
