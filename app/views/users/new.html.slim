@@ -6,6 +6,9 @@
     .field
       = form.label :email
       = form.email_field :email
+    .field
+      = form.label :avatar
+      = form.file_field :avatar
   = hidden_field_tag :facebook, params[:facebook]
   .field
     = form.label :phone

@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   validates :email, uniqueness: true
   validates :phone, format: { with: /\([\d]{2}\)\s[\d]{8,9}/ }
   after_create :mailchimp_sync
+  mount_uploader :avatar, AvatarUploader
 
   private
 
