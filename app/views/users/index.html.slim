@@ -46,4 +46,4 @@
         ul
           - @users.each do |user|
             li
-              .image= image_tag(user.avatar.present? ? user.avatar : 'user.jpg', title: user.name)
+              .image= image_tag(user.avatar.square, title: user.name)
