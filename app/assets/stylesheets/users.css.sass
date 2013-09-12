@@ -1,5 +1,8 @@
 body.users.index
   .enrollment
+    @include selection
+      background: $title-color
+      color: $yellow-bg
     background: image-url("bg-top-base.png") repeat-x bottom center #ffb901
     text-align: center
     padding-top: 2em
@@ -52,6 +55,9 @@ body.users.index
     
 
   .livestream
+    @include selection
+      background: white
+      color: $video-bg
     background: image-url("bg-video.jpg") no-repeat bottom center #231f20
     background-size: 100%
     iframe
@@ -60,14 +66,25 @@ body.users.index
       color: white
 
   .army
+    @include selection
+      background: white
+      color: $concrete-bg
     background: image-url("concrete_wall.png") top left
     p
-      color: $light-grey
+      color: $grey
     .users
       background: image-url("bonde.png") no-repeat top center
       min-height: 800px
       text-align: center
-      ul 
+      .see_all
+        text-align: center
+        padding-top: 10px
+        padding-bottom: 1em
+        a
+          color: white
+          font-weight: bold
+          text-decoration: underline
+      ul
         width: 320px
         height: 740px
         margin: 0 auto
@@ -81,14 +98,33 @@ body.users.index
             height: 60px 
             img
               +border-radius(50%)
-      .see_all
-        text-align: center
-        padding-top: 10px
-        padding-bottom: 1em
-        a
-          color: white
-          font-weight: bold
-          text-decoration: underline
+  .users
+    @include selection
+      background: $title-color
+      color: $light-grey
+    ul.full_list
+      background: $light-grey
+      overflow-y: scroll
+      text-align: left
+      height: 30em
+      color: $title-color
+      li 
+        display: block
+        overflow: hidden
+        width: 99%
+        padding: .8em
+        border-bottom: 2px dashed lighten(gray, 50%)
+        .avatar
+          width: 60px 
+          height: 60px
+          float: left
+          margin-right: .6em
+          img
+            +border-radius(50%)
+        .name
+          line-height: 3.5em
+          text-transform: capitalize
+
 .new_fb
   label
     display: block
