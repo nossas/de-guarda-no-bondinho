@@ -3,12 +3,10 @@ html
   head
     title Fique De Guarda pelo Bondinho de Santa Teresa!
     = favicon_link_tag "http://i.imgur.com/NbS3l8B.png"
-
-    meta name="og:title" content="Fique De Guarda pelo Bondinho de Santa Teresa!"
-    meta name="og:description" content="Acompanhe 24h por dia a garagem dos bondes de Santa Teresa! Os bondinhos são patrimônio histórico nacional mas estão sendo desmontados e tendo suas peças doadas pelo Governo. Fique De GuardaGaranta que nada sairá do lugar antes do Governo fazer um inventário!"
-    meta name="og:image" content=image_url("bonde.jpg")
-    meta name="og:url" content=root_url
-
+    meta property="og:title"        content="Fique De Guarda pelo Bondinho de Santa Teresa!"
+    meta property="og:description"  content="Acompanhe 24h por dia a garagem dos bondes de Santa Teresa! Os bondinhos são patrimônio histórico nacional mas estão sendo desmontados e tendo suas peças doadas pelo Governo. Fique De GuardaGaranta que nada sairá do lugar antes do Governo fazer um inventário!"
+    meta property="og:image"        content=image_url("bonde.jpg")
+    meta property="og:url"          content=root_url
     = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
