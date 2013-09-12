@@ -16,6 +16,7 @@ def to_element string
   return "iframe.video"                                if string == "the live stream"
   return "a#alert"                                     if string == "the alert button"
   return ".alert_sent"                                 if string == "the alert was sent"
+  return ".users ul"                                   if string == "the guardians list"
 end
 
 def to_link string

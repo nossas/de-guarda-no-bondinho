@@ -27,10 +27,22 @@
 .livestream#livestream
   .row
     .large-12.columns
-      h2 Bondinhos de Santa Teresa: Vigilância 24h
-      p Montamos uma base que transmite imagens da garagem dos bondinhos em tempo real, 24 horas por dia, 7 dias por semana. Acesse esta página sempre que tiver um tempo livre e se você supeitar que estão retirando peças, aperte o botão abaixo para alertar os guardiões!
-      iframe.video src="http://new.livestream.com/accounts/3913412/events/2375595/videos/29580783/player?autoPlay=true&height=540&mute=false&width=960" width="100%" height="460" frameborder="0" scrolling="no"
-      - if flash[:alert]
-        .alert_sent Ouvimos o seu alerta!
-      - else
-        = link_to image_tag("bt-alerta.png"), alert_path, id: "alert", method: :post
+      .content
+        h2 Bondinhos de Santa Teresa: Vigilância 24h
+        p Montamos uma base que transmite imagens da garagem dos bondinhos em tempo real, 24 horas por dia, 7 dias por semana. Acesse esta página sempre que tiver um tempo livre e se você supeitar que estão retirando peças, aperte o botão abaixo para alertar os guardiões!
+        iframe.video src="http://new.livestream.com/accounts/3913412/events/2375595/videos/29580783/player?autoPlay=true&height=540&mute=false&width=960" width="100%" height="460" frameborder="0" scrolling="no"
+        - if flash[:alert]
+          .alert_sent Ouvimos o seu alerta!
+        - else
+          = link_to image_tag("bt-alerta.png"), alert_path, id: "alert", method: :post
+.army
+  .row
+    .large-12.columns
+      .content
+        h2 Embarque você também nesse bonde
+        p Estamos de prontidão! Se a suspeita de retirada de peças for confirmada, a equipe do Meu Rio enviará um SMS para todos os guardiões convocando-os para uma mobilização na porta da garagem. Os bondinhos são patrimônio histórico nacional e precisa ser preservado. Se o Governo não o faz, façamos nós!
+      .users
+        ul
+          - @users.each do |user|
+            li
+              .image= image_tag(user.avatar.present? ? user.avatar : 'user.jpg', title: user.name)
