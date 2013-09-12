@@ -17,8 +17,9 @@ When(/^I submit "(.*?)"$/) do |arg1|
 end
 
 Then(/^I should see "(.*?)"$/) do |arg1|
-  sleep 1
-  page.should have_css(to_element(arg1))
+  wait_until do
+    page.should have_css(to_element(arg1))
+  end
 end
 
 Then(/^I should not see "(.*?)"$/) do |arg1|

@@ -23,3 +23,11 @@ def to_link string
   return "join_by_facebook" if string == "join by Facebook button"
   return "alert"            if string == "the alert button"
 end
+
+def wait_until
+  require "timeout"
+  Timeout.timeout(Capybara.default_wait_time) do
+    sleep(0.1) until value = yield
+    value
+  end
+end
