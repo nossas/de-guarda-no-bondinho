@@ -13,6 +13,7 @@ def to_element string
   return ".twitter-share-button"                       if string == "Twitter share button"
   return ".facebook-share-button"                      if string == "Facebook share button"
   return ".counter"                                    if string == "user counter"
+  return "iframe.video"                                if string == "the live stream"
 end
 
 def to_link string

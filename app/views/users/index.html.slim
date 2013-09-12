@@ -14,8 +14,6 @@
           h2 Você está de guarda!
           p Obrigado por fazer parte dessa mobilização. Quanto mais gente pegar esse bonde melhor. Por isso, chame os seus amigos no Facebook.
           a href="#" class="facebook-share-button"
-            span.count
-              fb:comments-count[href="#{root_url}"]
           a href="#" class="twitter-share-button"
       - else
         .large-12.columns
@@ -25,3 +23,10 @@
           = link_to image_tag('bt-facebook.png'), new_user_path(facebook: true), id: :join_by_facebook, rel: "facebox"
         .large-6.columns
           = link_to image_tag('bt-email.png'), new_user_path, id: :join_by_email, rel: "facebox"
+
+.livestream
+  .row
+    .large-12.columns
+      h2 Bondinhos de Santa Teresa: Vigilância 24h
+      p Montamos uma base que transmite imagens da garagem dos bondinhos em tempo real, 24 horas por dia, 7 dias por semana. Acesse esta página sempre que tiver um tempo livre e se você supeitar que estão retirando peças, aperte o botão abaixo para alertar os guardiões!
+      iframe.video src="http://new.livestream.com/accounts/3913412/events/2375595/videos/29580783/player?autoPlay=true&height=540&mute=false&width=960" width="100%" height="460" frameborder="0" scrolling="no"
