@@ -3,8 +3,9 @@
   .row
     .large-12.columns
       .counter
-        - User.count.to_s.split('').each do |digito|
-          span= digito
+        - @digits.each do |digit|
+          span.digit= digit
+        span.users Guardiões em Alerta
     .large-12.columns
       h1 O Governo do Rio está sucateando o patrimônio nacional. Os bondinhos de Santa Teresa precisam da sua ajuda!
     .large-12.columns

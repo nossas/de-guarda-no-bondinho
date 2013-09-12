@@ -1,5 +1,6 @@
 class UsersController < InheritedResources::Base
   before_action :facebook_auth, only: :create
+  before_action(only: :index) { @digits = User.count.to_s.split('') }
   layout false, only: :new
 
   def create
