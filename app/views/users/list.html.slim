@@ -1,0 +1,6 @@
+.users
+  ul.full_list
+    - @users.each do |user|
+      li
+        .avatar= image_tag(user.avatar.square, title: user.name)
+        .name= user.name

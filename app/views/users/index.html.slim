@@ -48,4 +48,4 @@
             li
               .avatar= image_tag(user.avatar.square, title: user.name)
         .see_all
-          = link_to 'Veja todos os guardiões', '#', id: :see_all_guardians
+          = link_to 'Veja todos os guardiões', users_list_path, id: :see_all_guardians, rel: "facebox"
