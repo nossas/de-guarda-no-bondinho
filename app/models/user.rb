@@ -18,7 +18,7 @@ class User < ActiveRecord::Base
         :double_optin => false
       })
     rescue Exception => e
-      puts e.message
+      logger.info e.message
     end
   end
 end

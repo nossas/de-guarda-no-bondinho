@@ -12,4 +12,14 @@ describe User do
   it { should allow_value("(21) 99999999").for(:phone) }
   it { should allow_value("(21) 999999999").for(:phone) }
   it { should_not allow_value("(21) 9999999").for(:phone) }
+
+  describe "#mailchimp_sync" do
+    context "when Gibbon raises an exception" do
+      before { Gibbon::API.stub_chain(:new, :lists, :subscribe).and_raise("my stubed exception") }
+      it "should log the exception output" do
+        Rails.logger.should_receive(:info).with("my stubed exception")
+        subject.send(:mailchimp_sync)
+      end
+    end
+  end
 end
