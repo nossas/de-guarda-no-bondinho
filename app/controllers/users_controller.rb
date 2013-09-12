@@ -3,6 +3,11 @@ class UsersController < InheritedResources::Base
   before_action(only: :index) { @digits = User.count.to_s.split('') }
   layout false, only: :new
 
+  def index
+    @users = User.limit(32)
+    index!
+  end
+
   def create
     facebook_data = request.env['omniauth.auth']
 
