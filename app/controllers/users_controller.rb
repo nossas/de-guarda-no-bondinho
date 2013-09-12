@@ -20,7 +20,7 @@ class UsersController < InheritedResources::Base
         name: facebook_data[:info][:name], 
         email: facebook_data[:info][:email], 
         phone: session.delete(:user_phone),
-        avatar: facebook_data[:info][:image]
+        remote_avatar_url: facebook_data[:info][:image]
       }
     end
 

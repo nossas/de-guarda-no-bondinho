@@ -15,7 +15,10 @@
       - if session[:user_id].present?
         .thanks_for_joining
           h2 Você está de guarda!
-          p Obrigado por fazer parte dessa mobilização. Quanto mais gente pegar esse bonde melhor. Por isso, chame os seus amigos no Facebook.
+          p 
+            | Obrigado por fazer parte dessa mobilização. Quanto mais gente pegar esse bonde melhor.
+            br
+            | Por isso, chame os seus amigos no Facebook.
           a href="#" class="facebook-share-button"
           a href="#" class="twitter-share-button"
       - else
