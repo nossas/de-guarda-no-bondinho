@@ -76,11 +76,13 @@ body.users.index
           display: inline-block
           list-style-type: none
           margin: 0 10px 20px 10px
-          .image
-            background-color: black
+          .avatar
+            float: right
+            width: 60px 
+            height: 60px 
+            +border-radius(50%)
             img
-              width: 60px
-              height: 60px
+              +border-radius(50%)
       .see_all
         text-align: center
         padding-top: 10px
