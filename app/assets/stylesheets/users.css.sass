@@ -39,11 +39,9 @@ body.users.index
         text-align: center
         color: white
 
-  .livestream
+  .content
     text-align: center
     padding: 1em 0
-    background: image-url("bg-video.jpg") no-repeat bottom center #231f20
-    background-size: 100%
     p, h2
       color: white
     h2
@@ -51,10 +49,36 @@ body.users.index
       font-size: 2.5em
       font-weight: normal
       margin-bottom: 0
+    
+
+  .livestream
+    background: image-url("bg-video.jpg") no-repeat bottom center #231f20
+    background-size: 100%
     iframe
       margin-bottom: 1em
     .alert_sent
       color: white
+
+  .army
+    background: image-url("concrete_wall.png") top left
+    p
+      color: $light-grey
+    .users
+      background: image-url("bonde.png") no-repeat top center
+      min-height: 800px
+      ul 
+        width: 320px
+        margin: 0 auto
+        padding-top: 98px
+        li 
+          display: inline-block
+          list-style-type: none
+          margin: 0 10px 20px 10px
+          .image
+            background-color: black
+            img
+              width: 60px
+              height: 60px
 
   form.new_user
     margin: 0
