@@ -42,8 +42,12 @@ Given(/^there are (\d+) users enrolled$/) do |arg1|
   arg1.to_i.times { User.make! }
 end
 
-Then(/^the "(.*?)" should contain "(.*?)"$/) do |arg1, arg2|
+Then(/^"(.*?)" should contain "(.*?)"$/) do |arg1, arg2|
   page.should have_css(to_element(arg1), text: arg2)
+end
+
+Then(/^"(.*?)" should have (\d+) elements?$/) do |arg1, arg2|
+  page.should have_css(to_element(arg1), count: arg2.to_i)
 end
 
 Then(/^an email should be sent to "(.*?)"$/) do |arg1|
