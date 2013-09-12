@@ -16,13 +16,15 @@ def to_element string
   return "iframe.video"                                if string == "the live stream"
   return "a#alert"                                     if string == "the alert button"
   return ".alert_sent"                                 if string == "the alert was sent"
-  return ".users ul li"                                if string == "the guardians list"
+  return ".users ul li"                                if string == "the guardians partial list"
+  return ".users ul.full_list li"                      if string == "the guardians full list"
 end
 
 def to_link string
-  return "join_by_email"    if string == "join by email button"
-  return "join_by_facebook" if string == "join by Facebook button"
-  return "alert"            if string == "the alert button"
+  return "join_by_email"      if string == "join by email button"
+  return "join_by_facebook"   if string == "join by Facebook button"
+  return "alert"              if string == "the alert button"
+  return "see_all_guardians"  if string == "see all guardians"
 end
 
 def wait_until

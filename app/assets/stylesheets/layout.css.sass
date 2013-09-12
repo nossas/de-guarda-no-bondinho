@@ -1,7 +1,18 @@
 $row-width: 780px
 
 $orange: #e26c26
-$light-grey: #B3B1B2
+$grey: #b3b1b2
+$light-grey: #d9d9d9
+$yellow-bg: #ffb901
+$video-bg: #231f20
+$concrete-bg: #34383d
+$title-color: #222222
+
+@mixin selection
+  ::-moz-selection 
+    @content
+  ::selection
+    @content
 
 @import foundation_and_overrides
 @import compass/css3
