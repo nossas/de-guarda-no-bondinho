@@ -30,11 +30,12 @@
       .content
         h2 Bondinhos de Santa Teresa: Vigilância 24h
         p Montamos uma base que transmite imagens da garagem dos bondinhos em tempo real, 24 horas por dia, 7 dias por semana. Acesse esta página sempre que tiver um tempo livre e, se você suspeitar que estão retirando peças, aperte o botão abaixo para alertar os guardiões!
-        iframe.video src="http://new.livestream.com/accounts/3913412/events/2375595/videos/29580783/player?autoPlay=true&height=540&mute=false&width=960" width="100%" height="460" frameborder="0" scrolling="no"
+        iframe.video width="100%" height="460" src="http://cdn.livestream.com/embed/meurio?layout=4&color=0x000000&autoPlay=true&mute=false&iconColorOver=0xe7e7e7&iconColor=0xcccccc&allowchat=true&height=540&width=960" style="border:0;outline:0" frameborder="0" scrolling="no"
         - if flash[:alert]
           .alert_sent Ouvimos o seu alerta!
         - else
           = link_to image_tag("bt-alerta.png"), alert_path, id: "alert", method: :post
+
 .army
   .row
     .large-12.columns
@@ -45,6 +46,6 @@
         ul
           - @users.each do |user|
             li
-              .image= image_tag(user.avatar.present? ? user.avatar : 'user.jpg', title: user.name)
+              .image= image_tag(user.avatar.square, title: user.name)
         .see_all
           = link_to 'Veja todos os guardiões', '#', id: :see_all_guardians
