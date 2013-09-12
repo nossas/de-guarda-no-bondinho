@@ -46,3 +46,5 @@
           - @users.each do |user|
             li
               .image= image_tag(user.avatar.present? ? user.avatar : 'user.jpg', title: user.name)
+        .see_all
+          = link_to 'Veja todos os guardiões', '#', id: :see_all_guardians

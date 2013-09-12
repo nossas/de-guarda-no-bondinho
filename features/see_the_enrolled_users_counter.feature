@@ -6,4 +6,4 @@ Feature: see enrolled users counter
   Scenario:
     Given there are 3 users enrolled
     And I'm in "the homepage"
-    Then the "user counter" should contain "3"
+    Then "the user counter" should contain "3"
