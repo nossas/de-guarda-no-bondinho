@@ -1,8 +1,9 @@
 class UserMailer < ActionMailer::Base
-  default from: "contato@meurio.org.br"
+  default from: ENV["DEFAULT_FROM_EMAIL"]
   
   def welcome user
-    mail to: user.email, subject: "Obrigado por ficar de Guarda pelos Bondinhos de Santa Teresa!"
+    @user = user
+    mail to: user.email, subject: "Obrigada por ficar de Guarda pelos Bondinhos de Santa Teresa!"
   end
 
   def alert
