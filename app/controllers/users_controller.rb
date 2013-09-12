@@ -4,7 +4,7 @@ class UsersController < InheritedResources::Base
   layout false, only: [:new, :list]
 
   def index
-    @users = User.limit(32)
+    @users = User.order("created_at DESC").limit(32)
     index!
   end
 

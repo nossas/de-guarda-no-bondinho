@@ -7,7 +7,10 @@
           span.digit= digit
         span.users Guardiões em Alerta
     .large-12.columns
-      h1 O Governo do Rio está sucateando o patrimônio nacional. Os bondinhos de Santa Teresa precisam da sua ajuda!
+      h1
+        | O Governo do Rio está sucateando o patrimônio nacional.
+        br
+        | Os bondinhos de Santa Teresa precisam da sua ajuda!
     .large-12.columns
       - if session[:user_id].present?
         .thanks_for_joining
@@ -17,7 +20,10 @@
           a href="#" class="twitter-share-button"
       - else
         .large-12.columns
-          p Há dois anos, um acidente matou seis pessoas e tirou os bondinhos de Santa Teresa de circulação. Infelizmente, essa foi apenas a parte visível e trágica do sucateamento sistemático de um dos símbolos mais tradicionais do Rio de Janeiro. Abandonados em uma garagem, cerca de 60 toneladas de peças dos bondes já foram doadas para ONGs sem maiores explicações. Se isso continuar, em breve, dos bondinhos só restará os trilhos.
+          p
+            | Há dois anos, um acidente matou seis pessoas e tirou de circulação os bondinhos de Santa Teresa. Infelizmente, essa foi apenas a parte visível e trágica do sucateamento sistemático de um dos símbolos mais tradicionais do Rio de Janeiro. Abandonados em uma garagem, cerca de 60 toneladas de peças dos bondes já foram doadas para ONGs sem maiores explicações.
+            br
+            | Se isso continuar, em breve, dos bondinhos só restará os trilhos.
           p Por isso, estamos de guarda! Vamos montar uma legião para impedir a retirada de peças até que seja feito um inventário minucioso desse patrimônio tombado. A cidade é nossa. Os bondinhos também!
         .large-6.columns
           = link_to image_tag('bt-facebook.png'), new_user_path(facebook: true), id: :join_by_facebook, rel: "facebox"
@@ -41,7 +47,7 @@
     .large-12.columns
       .content
         h2 Embarque você também nesse bonde
-        p Estamos de prontidão! Se a suspeita de retirada de peças for confirmada, a equipe do Meu Rio enviará um SMS para todos os guardiões convocando-os para uma mobilização na porta da garagem. Os bondinhos são patrimônio histórico nacional e precisa ser preservado. Se o Governo não o faz, façamos nós!
+        p Estamos de prontidão! Se a suspeita de retirada de peças for confirmada, a equipe do Meu Rio enviará um SMS para todos os guardiões convocando-os para uma mobilização na porta da garagem. Os bondinhos são patrimônio histórico nacional e precisam ser preservados. Se o Governo não o faz, façamos nós!
       .users
         ul
           - @users.each do |user|

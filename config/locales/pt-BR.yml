@@ -212,6 +212,7 @@ pt-br:
         name: "Nome"
         email: "E-mail"
         phone: "Telefone"
+        avatar: "Foto"
     errors:
       <<: *errors
   faker:
