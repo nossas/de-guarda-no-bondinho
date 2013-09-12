@@ -48,3 +48,7 @@ end
 Then(/^an email should be sent to "(.*?)"$/) do |arg1|
   ActionMailer::Base.deliveries.select{|e| e.to.include?(arg1)}.should_not be_empty
 end
+
+Then(/^an email should be sent to the admin team$/) do
+  ActionMailer::Base.deliveries.select{|e| e.to.include?(ENV["ADMIN_EMAIL"])}.should_not be_empty
+end

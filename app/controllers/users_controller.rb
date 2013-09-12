@@ -20,6 +20,11 @@ class UsersController < InheritedResources::Base
     redirect_to root_path
   end
 
+  def alert
+    UserMailer.alert.deliver
+    redirect_to "#{root_path}#livestream", alert: true
+  end
+
   def permitted_params
     params.permit(user: [:name, :email, :phone, :avatar])
   end

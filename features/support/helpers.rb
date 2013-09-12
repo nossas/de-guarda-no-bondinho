@@ -14,9 +14,12 @@ def to_element string
   return ".facebook-share-button"                      if string == "Facebook share button"
   return ".counter"                                    if string == "user counter"
   return "iframe.video"                                if string == "the live stream"
+  return "a#alert"                                     if string == "the alert button"
+  return ".alert_sent"                                 if string == "the alert was sent"
 end
 
 def to_link string
   return "join_by_email"    if string == "join by email button"
   return "join_by_facebook" if string == "join by Facebook button"
+  return "alert"            if string == "the alert button"
 end

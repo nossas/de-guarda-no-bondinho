@@ -2,6 +2,8 @@ DeGuardaNoBondinho::Application.routes.draw do
   root 'users#index'
   resources :users, only: [:index, :new, :create]
 
+  post "/alert" => "users#alert", as: :alert
+
   get "/auth/facebook", as: :facebook_auth
   get "/auth/facebook/callback" => 'users#create'
   get "/auth/failure", as: :auth_failure
