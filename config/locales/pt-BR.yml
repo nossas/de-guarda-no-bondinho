@@ -211,7 +211,7 @@ pt-br:
       user:
         name: "Nome"
         email: "E-mail"
-        phone: "Telefone"
+        phone: "Insira o seu telefone para receber os alertas via SMS"
         avatar: "Foto"
     errors:
       <<: *errors
