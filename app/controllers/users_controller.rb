@@ -1,7 +1,7 @@
 class UsersController < InheritedResources::Base
   before_action :facebook_auth, only: :create
   before_action(only: :index) { @digits = User.count.to_s.split('') }
-  layout false, only: [:new, :list]
+  layout false, only: [:new, :list, :alert_form]
 
   def index
     @users = User.order("created_at DESC").limit(32)
@@ -32,6 +32,9 @@ class UsersController < InheritedResources::Base
   def alert
     UserMailer.alert.deliver
     redirect_to "#{root_path}#livestream", alert: true
+  end
+
+  def alert_form
   end
 
   def permitted_params

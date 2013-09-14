@@ -3,6 +3,7 @@ DeGuardaNoBondinho::Application.routes.draw do
   resources :users, only: [:index, :new, :create]
 
   post "/alert" => "users#alert", as: :alert
+  get "/alert" => "users#alert_form", as: :alert_form
 
   get "/auth/facebook", as: :facebook_auth
   get "/auth/facebook/callback" => 'users#create'

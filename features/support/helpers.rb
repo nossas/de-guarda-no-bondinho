@@ -13,7 +13,7 @@ def to_element string
   return ".twitter-share-button"                       if string == "Twitter share button"
   return ".facebook-share-button"                      if string == "Facebook share button"
   return ".counter"                                    if string == "the user counter"
-  return "iframe.video"                                if string == "the live stream"
+  return "iframe.video_embed"                          if string == "the live stream"
   return "a#alert"                                     if string == "the alert button"
   return ".alert_sent"                                 if string == "the alert was sent"
   return ".users ul li"                                if string == "the guardians partial list"
@@ -21,10 +21,11 @@ def to_element string
 end
 
 def to_link string
-  return "join_by_email"      if string == "join by email button"
-  return "join_by_facebook"   if string == "join by Facebook button"
-  return "alert"              if string == "the alert button"
-  return "see_all_guardians"  if string == "see all guardians"
+  return "join_by_email"              if string == "join by email button"
+  return "join_by_facebook"           if string == "join by Facebook button"
+  return "alert"                      if string == "the alert button"
+  return "see_all_guardians"          if string == "see all guardians"
+  return "alert_confirmation_button"  if string == "the alert confirmation button"
 end
 
 def wait_until

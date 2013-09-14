@@ -37,7 +37,7 @@ h1
   label.message
     color: red
 
-input[type='submit']
+input[type='submit'], .btn
   font-family: "Proxima Nova Extrabold"
   background: $orange
   border: none
@@ -48,6 +48,8 @@ input[type='submit']
   cursor: pointer
   +box-shadow(0 2px darken($orange, 20%))
   +border-radius(3px)
+  &:hover
+    color: white
 
 .facebook-share-button
   background: image-url("fb-share.png") no-repeat
