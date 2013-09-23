@@ -11,11 +11,16 @@ class User < ActiveRecord::Base
 
   def mailchimp_sync
     begin
-      Gibbon::API.new(ENV['MAILCHIMP_API']).lists.subscribe({
+      Gibbon::API.lists.subscribe({
         :id => ENV['MAILCHIMP_LIST_ID'], 
         :email => {:email => self.email}, 
         :merge_vars => {FNAME: self.name}, 
         :double_optin => false
+      })
+      Gibbon:API.lists.static_segment_members_add({
+        seg_id: ENV['MAILCHIMP_SEG_ID'],
+        id: ENV['MAILCHIMP_LIST_ID'],
+        batch: [{ email: self.email }]
       })
     rescue Exception => e
       logger.info e.message
