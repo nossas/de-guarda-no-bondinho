@@ -17,7 +17,7 @@ class User < ActiveRecord::Base
         :merge_vars => {FNAME: self.name}, 
         :double_optin => false
       })
-      Gibbon:API.lists.static_segment_members_add({
+      Gibbon::API.lists.static_segment_members_add({
         seg_id: ENV['MAILCHIMP_SEG_ID'],
         id: ENV['MAILCHIMP_LIST_ID'],
         batch: [{ email: self.email }]
