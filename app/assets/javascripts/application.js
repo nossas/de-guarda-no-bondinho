@@ -18,8 +18,6 @@
 //= require rails.validations
 //= require_tree .
 
-$.facebox.settings.closeImage = 'https://raw.github.com/bai/facebox-rails/master/vendor/assets/images/facebox/closelabel.png'
-$.facebox.settings.loadingImage = 'https://raw.github.com/bai/facebox-rails/master/vendor/assets/images/facebox/loading.gif'
 
 $(document).bind('reveal.facebox', function() {
   $('form.new_user').enableClientSideValidations();
