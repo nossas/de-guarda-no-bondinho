@@ -1,9 +1,9 @@
 class UserMailer < ActionMailer::Base
-  default from: "Meu Rio <contato@meurio.org.br>"
+  default from: "Meu Rio <fernanda@meurio.org.br>"
   
   def welcome user
     @user = user
-    mail to: user.email, subject: "Confirme sua presença no bloco-ato"
+    mail to: user.email, subject: "O que mais você pode fazer pelo bondinho?"
   end
 
   def alert
